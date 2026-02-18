@@ -11,5 +11,8 @@ search_Acess_in_file = re.findall("Acce.+",file.read()) #Coloca o resultado em a
 print(search_Acess_in_file)
 
 for i in range(len(search_Acess_in_file)):
+    print(i)
     for c in range(len(default_words)):
-        search_default_words = re.search(default_words[c],search_Acess_in_file[i])
+        print(c)
+        search_default_words = re.search(f'sshd.+',search_Acess_in_file[i])
+    print(search_default_words)
