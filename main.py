@@ -1,18 +1,58 @@
 import re
+from datetime import *
+from time import strftime
+import yaml
+
 
 # Padrão de Analise
 # Data | Hora | IP de requisicao | IP de Destino | Serviço | Porta | Protocolo | Username | Hostname
 # Tipo de log: Erro, acesso, alteração, requisição
+
+data_atual = date.today()
+usuarios = ["root", "admin", "theo", "serginho", "roberto", "maria", "joao", "pedro", "lucas", "ana"]
+data = {}
 file = open('logs.txt', 'r')
-default_words = ['sshd','nginx','node-app','mysqld','kernel','docker','CRON','systemd']
+logs = file.readlines() #Pega linha por linha 
 
 
-search_Acess_in_file = re.findall("Acce.+",file.read()) #Coloca o resultado em array
-print(search_Acess_in_file)
+def analisa_data(dia):
+    for c in range(len(dia)):
+        if dia[c] == strftime("%Y-%m-%d"):
+            return dia[c]
 
-for i in range(len(search_Acess_in_file)):
-    print(i)
-    for c in range(len(default_words)):
-        print(c)
-        search_default_words = re.search(f'sshd.+',search_Acess_in_file[i])
-    print(search_default_words)
+def analisa_usuario(usuario):
+    for c in range(len(usuario)):
+        for i in range(len(usuarios)):
+            if usuario[c] == usuarios[i]:
+                return usuario[c]
+
+def analisa(log_splitado):
+    newdata = {
+        "Data do Log": analisa_data(log_splitado),
+        "Usuario do Log": analisa_usuario(log_splitado)
+        }
+    
+    # Atualiza o dicionário com os novos dados
+    newdata.update(data)
+
+    # Aplica os dados ao arquivo yaml
+    with open("file.yaml","w") as yaml_file:
+        yaml.dump(newdata, yaml_file)
+    print(data)
+    print(newdata)
+
+
+    #if analisa_usuario(log_splitado) == None:
+    #    print("Usuario do Log: Usuario não encontrado")
+    #else:
+    #    print(f"Usuario do Log: {analisa_usuario(log_splitado)}")
+    #print(f"Data do Log: {analisa_data(log_splitado)}")
+    #print(" ")
+
+
+#file = open('logs.txt', 'r')
+#logs = re.findall(f"{data_atual}.+",file.read()) #Pega o dia (primeiro valor do log) e coloca o resultado na array logs array
+
+for c in range(len(logs)):
+    analisa(logs[c].split()) # Retorna toda linha quebrada em array, cada valor separado por espaço
+
