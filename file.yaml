@@ -1,45 +1,60 @@
+0:
+  Data: '2026-01-13'
+  Servico: 'sshd[2145]:'
+  Usuario: theo
 1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: theo
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: admin
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: roberto
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: null
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: roberto
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: roberto
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: admin
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: null
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: theo
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: serginho
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: serginho
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: serginho
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: theo
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: null
-1:
-  Data do Log: '2026-02-23'
-  Usuario do Log: null
+  Data: '2026-01-15'
+  Servico: 'sshd[2151]:'
+  Usuario: admin
+2:
+  Data: '2026-01-19'
+  Servico: 'sshd[2151]:'
+  Usuario: roberto
+3:
+  Data: '2026-01-20'
+  Servico: 'sshd[2151]:'
+  Usuario: null
+4:
+  Data: '2026-01-21'
+  Servico: 'nginx:'
+  Usuario: roberto
+5:
+  Data: '2026-01-21'
+  Servico: 'nginx:'
+  Usuario: roberto
+6:
+  Data: '2026-01-24'
+  Servico: nginx
+  Usuario: admin
+7:
+  Data: '2026-01-25'
+  Servico: 'sshd[2239]:'
+  Usuario: null
+8:
+  Data: '2026-01-28'
+  Servico: 'nginx:'
+  Usuario: theo
+9:
+  Data: '2026-01-29'
+  Servico: 'kernel:'
+  Usuario: serginho
+10:
+  Data: '2026-01-30'
+  Servico: 'sshd[2244]:'
+  Usuario: serginho
+11:
+  Data: '2026-02-10'
+  Servico: 'nginx:'
+  Usuario: serginho
+12:
+  Data: '2026-02-11'
+  Servico: 'sshd[2301]:'
+  Usuario: theo
+13:
+  Data: '2026-02-20'
+  Servico: 'sshd[2301]:'
+  Usuario: null
+14:
+  Data: '2026-02-23'
+  Servico: 'nginx:'
+  Usuario: null

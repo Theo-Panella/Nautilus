@@ -28,7 +28,7 @@ def analisa_usuario(usuario):
 
 def analisa(log_splitado):
     newdata = {
-        1 : {
+        "a" : {
         "Data do Log": analisa_data(log_splitado),
         "Usuario do Log": analisa_usuario(log_splitado)
         }
