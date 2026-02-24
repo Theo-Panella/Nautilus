@@ -27,21 +27,8 @@ data = {}
 #Feb 24 10:00:33 server01 sshd[1035]: Failed password for maria from 191.32.88.10 port 49821 ssh2
 #Feb 24 10:00:40 server01 sshd[1038]: Accepted password for maria from 191.32.88.10 port 49822 ssh2
 # --------------------------------------------------------------------------------------------------------------------
-#def analisa_usuario_falha(usuario):
-#    result = re.search("Failed password for (.*) from", usuario)
-#    if result:
-#        return result.group(1)
-#    else:
-#        return "Usuario invalido"
-#        
-#
-#def analisa_usuario_invalido(usuario):
-#    result = re.search("Invalid user (.*) from", usuario)
-#    if result:
-#        return result.group(1)
-#    else:
-#        return "Usuario invalido"
-
+# Bloco de analise de usuarios
+# --------------------------------------------------------------------------------------------------------------------
 def analisa_user(logs):
     #for result in logs:
         if re.search("Failed password for.*", logs):
@@ -65,7 +52,6 @@ def analisa_user(logs):
 # Bloco de analise de IPs, portas e PID
 # --------------------------------------------------------------------------------------------------------------------
 def analisa_ip(logs):
-    #for result in logs:
         if re.search("Failed password for.*", logs):
             log_wrong_passwd_ip = re.search("Failed password for.* from (.*) port", logs)
             if log_wrong_passwd_ip:
@@ -82,7 +68,6 @@ def analisa_ip(logs):
                 return log_successful_login_ip.group(1)
             
 def analisa_porta(logs):
-    #for result in logs:
         if re.search("Failed password for.*", logs):
             log_wrong_passwd_port = re.search("Failed password for.* port (.*) ssh2", logs)
             if log_wrong_passwd_port:
@@ -106,16 +91,33 @@ def analisa_pid(logs):
 # --------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------
+# Bloco de analise de Criticidade
+# --------------------------------------------------------------------------------------------------------------------
+def analisa_criticidade(logs):
+    criticidade = 0
+    if (analisa_user(logs) not in Usuarios or analisa_ip(logs) not in IPs):
+        criticidade += 4
+        if re.search("Failed password for.*", logs):
+            criticidade += 3    
+        elif re.search("Invalid user.*", logs):
+            criticidade += 2
+        elif re.search("Accepted password for.*", logs):
+            criticidade += 1
+    else:
+        criticidade += 1
+    
+    return criticidade
+
+# --------------------------------------------------------------------------------------------------------------------
 # Bloco de analise geral
 # --------------------------------------------------------------------------------------------------------------------
-
 def analisa_geral(logs):
         return {
             "Usario": analisa_user(logs),
             "IP de acesso": analisa_ip(logs),
             "porta de acesso": analisa_porta(logs),
             "PID:" : analisa_pid(logs),
-            "Criticidade": "Alta" if (analisa_user(logs) not in Usuarios or analisa_ip(logs) not in IPs) else "Baixa"
+            "Criticidade": (analisa_criticidade(logs))
         }
 
 
@@ -123,11 +125,7 @@ def analisa_geral(logs):
 for c in range(len(logs)):
     newdata = {
         c: {
-        "Usario": analisa_geral(logs[c])["Usario"],
-        "IP de acesso": analisa_geral(logs[c])["IP de acesso"],
-        "porta de acesso": analisa_geral(logs[c])["porta de acesso"],
-        "PID:" : analisa_geral(logs[c])["PID:"],
-        "Criticidade": analisa_geral(logs[c])["Criticidade"]
+        **analisa_geral(logs[c]) # Desconpacta o dicionário e retorna equivalente a cada linha
         }}
 
     data.update(newdata)
