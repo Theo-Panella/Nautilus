@@ -1,60 +1,202 @@
 0:
-  Data: '2026-01-13'
-  Servico: 'sshd[2145]:'
-  Usuario: theo
+  IP de acesso: 185.243.115.21
+  'PID:': '1021'
+  User: root
+  porta de acesso: '53421'
 1:
-  Data: '2026-01-15'
-  Servico: 'sshd[2151]:'
-  Usuario: admin
+  IP de acesso: 185.243.115.21
+  'PID:': '1023'
+  User: root
+  porta de acesso: '53422'
 2:
-  Data: '2026-01-19'
-  Servico: 'sshd[2151]:'
-  Usuario: roberto
+  IP de acesso: 185.243.115.21
+  'PID:': '1025'
+  User: root
+  porta de acesso: '53423'
 3:
-  Data: '2026-01-20'
-  Servico: 'sshd[2151]:'
-  Usuario: null
+  IP de acesso: 185.243.115.21
+  'PID:': '1027'
+  User: admin
+  porta de acesso: '53424'
 4:
-  Data: '2026-01-21'
-  Servico: 'nginx:'
-  Usuario: roberto
+  IP de acesso: 45.83.12.77
+  'PID:': '1030'
+  User: invalid user oracle
+  porta de acesso: '60111'
 5:
-  Data: '2026-01-21'
-  Servico: 'nginx:'
-  Usuario: roberto
+  IP de acesso: 45.83.12.77
+  'PID:': '1032'
+  User: test
+  porta de acesso: null
 6:
-  Data: '2026-01-24'
-  Servico: nginx
-  Usuario: admin
+  IP de acesso: 191.32.88.10
+  'PID:': '1035'
+  User: maria
+  porta de acesso: '49821'
 7:
-  Data: '2026-01-25'
-  Servico: 'sshd[2239]:'
-  Usuario: null
+  IP de acesso: 191.32.88.10
+  'PID:': '1038'
+  User: maria
+  porta de acesso: '49822'
 8:
-  Data: '2026-01-28'
-  Servico: 'nginx:'
-  Usuario: theo
+  IP de acesso: null
+  'PID:': '1041]: Connection closed by authenticating user maria 191.32.88.10 port
+    49822 [preauth'
+  User: null
+  porta de acesso: null
 9:
-  Data: '2026-01-29'
-  Servico: 'kernel:'
-  Usuario: serginho
+  IP de acesso: 203.190.22.1
+  'PID:': '1044'
+  User: root
+  porta de acesso: '41001'
 10:
-  Data: '2026-01-30'
-  Servico: 'sshd[2244]:'
-  Usuario: serginho
+  IP de acesso: 203.190.22.1
+  'PID:': '1047'
+  User: root
+  porta de acesso: '41002'
 11:
-  Data: '2026-02-10'
-  Servico: 'nginx:'
-  Usuario: serginho
+  IP de acesso: 203.190.22.1
+  'PID:': '1050'
+  User: root
+  porta de acesso: '41003'
 12:
-  Data: '2026-02-11'
-  Servico: 'sshd[2301]:'
-  Usuario: theo
+  IP de acesso: 203.190.22.1
+  'PID:': '1053'
+  User: root
+  porta de acesso: '41004'
 13:
-  Data: '2026-02-20'
-  Servico: 'sshd[2301]:'
-  Usuario: null
+  IP de acesso: 203.190.22.1
+  'PID:': '1056'
+  User: root
+  porta de acesso: '41005'
 14:
-  Data: '2026-02-23'
-  Servico: 'nginx:'
-  Usuario: null
+  IP de acesso: 177.54.21.99
+  'PID:': '1059'
+  User: theo
+  porta de acesso: '53211'
+15:
+  IP de acesso: 103.77.192.44
+  'PID:': '1062'
+  User: invalid user postgres
+  porta de acesso: '60221'
+16:
+  IP de acesso: 103.77.192.44
+  'PID:': '1064'
+  User: backup
+  porta de acesso: null
+17:
+  IP de acesso: 10.0.0.12
+  'PID:': '1067'
+  User: joao
+  porta de acesso: '55231'
+18:
+  IP de acesso: 10.0.0.12
+  'PID:': '1070'
+  User: joao
+  porta de acesso: '55232'
+19:
+  IP de acesso: null
+  'PID:': '1073'
+  User: null
+  porta de acesso: null
+20:
+  IP de acesso: 91.200.14.88
+  'PID:': '1076'
+  User: root
+  porta de acesso: '47001'
+21:
+  IP de acesso: 91.200.14.88
+  'PID:': '1079'
+  User: admin
+  porta de acesso: '47002'
+22:
+  IP de acesso: 91.200.14.88
+  'PID:': '1082'
+  User: root
+  porta de acesso: '47003'
+23:
+  IP de acesso: 91.200.14.88
+  'PID:': '1085'
+  User: root
+  porta de acesso: '47004'
+24:
+  IP de acesso: 91.200.14.88
+  'PID:': '1088'
+  User: root
+  porta de acesso: '47005'
+25:
+  IP de acesso: 200.145.32.7
+  'PID:': '1091'
+  User: pedro
+  porta de acesso: '51234'
+26:
+  IP de acesso: null
+  'PID:': '1094]: Connection closed by authenticating user pedro 200.145.32.7 port
+    51234 [preauth'
+  User: null
+  porta de acesso: null
+27:
+  IP de acesso: 62.210.99.14
+  'PID:': '1097'
+  User: invalid user guest
+  porta de acesso: '42311'
+28:
+  IP de acesso: 62.210.99.14
+  'PID:': '1100'
+  User: invalid user guest
+  porta de acesso: '42312'
+29:
+  IP de acesso: 62.210.99.14
+  'PID:': '1103'
+  User: invalid user guest
+  porta de acesso: '42313'
+30:
+  IP de acesso: 62.210.99.14
+  'PID:': '1106'
+  User: invalid user guest
+  porta de acesso: '42314'
+31:
+  IP de acesso: 62.210.99.14
+  'PID:': '1109'
+  User: invalid user guest
+  porta de acesso: '42315'
+32:
+  IP de acesso: 172.16.1.15
+  'PID:': '1112'
+  User: ana
+  porta de acesso: '60021'
+33:
+  IP de acesso: 189.77.12.5
+  'PID:': '1115'
+  User: lucas
+  porta de acesso: '52211'
+34:
+  IP de acesso: 189.77.12.5
+  'PID:': '1118'
+  User: lucas
+  porta de acesso: '52212'
+35:
+  IP de acesso: null
+  'PID:': '1121'
+  User: null
+  porta de acesso: null
+36:
+  IP de acesso: 37.49.225.33
+  'PID:': '1124'
+  User: root
+  porta de acesso: '39001'
+37:
+  IP de acesso: 37.49.225.33
+  'PID:': '1127'
+  User: root
+  porta de acesso: '39002'
+38:
+  IP de acesso: 37.49.225.33
+  'PID:': '1130'
+  User: root
+  porta de acesso: '39003'
+39:
+  IP de acesso: 37.49.225.33
+  'PID:': '1133'
+  User: root
+  porta de acesso: '39004'

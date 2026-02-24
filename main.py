@@ -8,52 +8,114 @@ import yaml
 # Data | Hora | IP de requisicao | IP de Destino | Serviço | Porta | Protocolo | Username | Hostname
 # Tipo de log: Erro, acesso, alteração, requisição
 
-data_atual = date.today()
-usuarios = ["root", "admin", "theo", "serginho", "roberto", "maria", "joao", "pedro", "lucas", "ana"]
+#Parametros de analise
+#Usuarios já conhecidos: root, admin, theo, serginho
+#IPs já conhecidos: "203.190.22.1", "91.200.14.88", "189.77.12.5"
+IPs = ["203.190.22.1", "91.200.14.88", "189.77.12.5"]
+Usuarios = ["root", "admin", "theo", "serginho"]
+
+
+# Variavel de abertura do arquivo de logs
+log_file = open('logs.txt', 'r')
+
+# Leitura de linha dentro de uma array, cada linha é um index da array
+logs = log_file.readlines() #
 data = {}
-file = open('logs.txt', 'r')
-logs = file.readlines() #Pega linha por linha 
+
+# Bloco de Analise de usuarios
+#Feb 24 10:00:26 server01 sshd[1032]: Invalid user test from 45.83.12.77 port 60112
+#Feb 24 10:00:33 server01 sshd[1035]: Failed password for maria from 191.32.88.10 port 49821 ssh2
+#Feb 24 10:00:40 server01 sshd[1038]: Accepted password for maria from 191.32.88.10 port 49822 ssh2
+# --------------------------------------------------------------------------------------------------------------------
+#def analisa_usuario_falha(usuario):
+#    result = re.search("Failed password for (.*) from", usuario)
+#    if result:
+#        return result.group(1)
+#    else:
+#        return "Usuario invalido"
+#        
+#
+#def analisa_usuario_invalido(usuario):
+#    result = re.search("Invalid user (.*) from", usuario)
+#    if result:
+#        return result.group(1)
+#    else:
+#        return "Usuario invalido"
+
+def analisa_user(logs):
+    for result in logs:
+        if re.search("Failed password for.*", result):
+            log_wrong_passwd = re.search("Failed password for (.*) from", result)
+            if log_wrong_passwd:
+                return log_wrong_passwd.group(1)
+
+        elif re.search("Invalid user.*", result):
+            log_invalid_user = re.search("Invalid user (.*) from", result)
+            #print("Failed login attempt for invalid user:", log_invalid_user)
+            if log_invalid_user:
+                return log_invalid_user.group(1)
+
+        elif re.search("Accepted password for.*", result):
+            #print("Successful login for user:", re.search(f"Accepted password for (.*) from", result).group(1))
+            return re.search(f"Accepted password for (.*) from", result).group(1)
+# --------------------------------------------------------------------------------------------------------------------
 
 
-def analisa_data(dia):
-    for c in range(len(dia)):
-        if dia[c] == strftime("%Y-%m-%d"):
-            return dia[c]
+# --------------------------------------------------------------------------------------------------------------------
+# Bloco de analise de IPs, portas e PID
+# --------------------------------------------------------------------------------------------------------------------
+def analisa_ip(logs):
+    for result in logs:
+        if re.search("Failed password for.*", result):
+            log_wrong_passwd_ip = re.search("Failed password for.* from (.*) port", result)
+            if log_wrong_passwd_ip:
+                return log_wrong_passwd_ip.group(1)
 
-def analisa_usuario(usuario):
-    for c in range(len(usuario)):
-        for i in range(len(usuarios)):
-            if usuario[c] == usuarios[i]:
-                return usuario[c]
+        elif re.search("Invalid user.*", result):
+            log_invalid_user_ip = re.search("Invalid user.* from (.*) port", result)
+            if log_invalid_user_ip:
+                return log_invalid_user_ip.group(1)
 
-def analisa(log_splitado):
-    newdata = {
-        "a" : {
-        "Data do Log": analisa_data(log_splitado),
-        "Usuario do Log": analisa_usuario(log_splitado)
-        }
-        }
-    
-    return newdata
+        elif re.search("Accepted password for.*", result):
+            log_successful_login_ip = re.search("Accepted password for.* from (.*) port", result)
+            if log_successful_login_ip:
+                return log_successful_login_ip.group(1)
+            
+def analisa_porta(logs):
+    for result in logs:
+        if re.search("Failed password for.*", result):
+            log_wrong_passwd_port = re.search("Failed password for.* port (.*) ssh2", result)
+            if log_wrong_passwd_port:
+                return log_wrong_passwd_port.group(1)
 
-    #if analisa_usuario(log_splitado) == None:
-    #    print("Usuario do Log: Usuario não encontrado")
-    #else:
-    #    print(f"Usuario do Log: {analisa_usuario(log_splitado)}")
-    #print(f"Data do Log: {analisa_data(log_splitado)}")
-    #print(" ")
+        elif re.search("Invalid user.*", result):
+            log_invalid_user_port = re.search("Invalid user.* port (.*) ssh2", result)
+            if log_invalid_user_port:
+                return log_invalid_user_port.group(1)
 
+        elif re.search("Accepted password for.*", result):
+            log_successful_login_port = re.search("Accepted password for.* port (.*) ssh2", result)
+            if log_successful_login_port:
+                return log_successful_login_port.group(1)
 
-#file = open('logs.txt', 'r')
-#logs = re.findall(f"{data_atual}.+",file.read()) #Pega o dia (primeiro valor do log) e coloca o resultado na array logs array
+def analisa_pid(logs):
+    for result in logs:
+        pid = re.search("sshd\[(.*)\]", result)
+        if pid:
+            return pid.group(1)
+# --------------------------------------------------------------------------------------------------------------------
 
 for c in range(len(logs)):
-    
-    # Atualiza o dicionário com os novos dados
-    data.update(analisa(logs[c].split())) # Retorna toda linha quebrada em array, cada valor separado por espaço
+    newdata = {
+        c: {
+        "User": analisa_user([logs[c]]),
+        "IP de acesso": analisa_ip([logs[c]]),
+        "porta de acesso": analisa_porta([logs[c]]),
+        "PID:" : analisa_pid([logs[c]])
+        }}
 
-    # Aplica os dados ao arquivo yaml
-    with open("file.yaml","a") as yaml_file:
-        yaml.dump(data, yaml_file)
-    print(analisa(logs[c].split()))
+    data.update(newdata)
+
+    with open("file.yaml","w") as file:
+        yaml.dump(data, file)
 
