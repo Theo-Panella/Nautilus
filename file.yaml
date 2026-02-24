@@ -1,0 +1,242 @@
+0:
+  Criticidade: Alta
+  IP de acesso: 185.243.115.21
+  'PID:': '1021'
+  Usario: root
+  porta de acesso: '53421'
+1:
+  Criticidade: Alta
+  IP de acesso: 185.243.115.21
+  'PID:': '1023'
+  Usario: root
+  porta de acesso: '53422'
+2:
+  Criticidade: Alta
+  IP de acesso: 185.243.115.21
+  'PID:': '1025'
+  Usario: root
+  porta de acesso: '53423'
+3:
+  Criticidade: Alta
+  IP de acesso: 185.243.115.21
+  'PID:': '1027'
+  Usario: admin
+  porta de acesso: '53424'
+4:
+  Criticidade: Alta
+  IP de acesso: 45.83.12.77
+  'PID:': '1030'
+  Usario: invalid user oracle
+  porta de acesso: '60111'
+5:
+  Criticidade: Alta
+  IP de acesso: 45.83.12.77
+  'PID:': '1032'
+  Usario: test
+  porta de acesso: null
+6:
+  Criticidade: Alta
+  IP de acesso: 191.32.88.10
+  'PID:': '1035'
+  Usario: maria
+  porta de acesso: '49821'
+7:
+  Criticidade: Alta
+  IP de acesso: 191.32.88.10
+  'PID:': '1038'
+  Usario: maria
+  porta de acesso: '49822'
+8:
+  Criticidade: Alta
+  IP de acesso: null
+  'PID:': '1041]: Connection closed by authenticating user maria 191.32.88.10 port
+    49822 [preauth'
+  Usario: null
+  porta de acesso: null
+9:
+  Criticidade: Baixa
+  IP de acesso: 203.190.22.1
+  'PID:': '1044'
+  Usario: root
+  porta de acesso: '41001'
+10:
+  Criticidade: Baixa
+  IP de acesso: 203.190.22.1
+  'PID:': '1047'
+  Usario: root
+  porta de acesso: '41002'
+11:
+  Criticidade: Baixa
+  IP de acesso: 203.190.22.1
+  'PID:': '1050'
+  Usario: root
+  porta de acesso: '41003'
+12:
+  Criticidade: Baixa
+  IP de acesso: 203.190.22.1
+  'PID:': '1053'
+  Usario: root
+  porta de acesso: '41004'
+13:
+  Criticidade: Baixa
+  IP de acesso: 203.190.22.1
+  'PID:': '1056'
+  Usario: root
+  porta de acesso: '41005'
+14:
+  Criticidade: Alta
+  IP de acesso: 177.54.21.99
+  'PID:': '1059'
+  Usario: theo
+  porta de acesso: '53211'
+15:
+  Criticidade: Alta
+  IP de acesso: 103.77.192.44
+  'PID:': '1062'
+  Usario: invalid user postgres
+  porta de acesso: '60221'
+16:
+  Criticidade: Alta
+  IP de acesso: 103.77.192.44
+  'PID:': '1064'
+  Usario: backup
+  porta de acesso: null
+17:
+  Criticidade: Alta
+  IP de acesso: 10.0.0.12
+  'PID:': '1067'
+  Usario: joao
+  porta de acesso: '55231'
+18:
+  Criticidade: Alta
+  IP de acesso: 10.0.0.12
+  'PID:': '1070'
+  Usario: joao
+  porta de acesso: '55232'
+19:
+  Criticidade: Alta
+  IP de acesso: null
+  'PID:': '1073'
+  Usario: null
+  porta de acesso: null
+20:
+  Criticidade: Baixa
+  IP de acesso: 91.200.14.88
+  'PID:': '1076'
+  Usario: root
+  porta de acesso: '47001'
+21:
+  Criticidade: Baixa
+  IP de acesso: 91.200.14.88
+  'PID:': '1079'
+  Usario: admin
+  porta de acesso: '47002'
+22:
+  Criticidade: Baixa
+  IP de acesso: 91.200.14.88
+  'PID:': '1082'
+  Usario: root
+  porta de acesso: '47003'
+23:
+  Criticidade: Baixa
+  IP de acesso: 91.200.14.88
+  'PID:': '1085'
+  Usario: root
+  porta de acesso: '47004'
+24:
+  Criticidade: Baixa
+  IP de acesso: 91.200.14.88
+  'PID:': '1088'
+  Usario: root
+  porta de acesso: '47005'
+25:
+  Criticidade: Alta
+  IP de acesso: 200.145.32.7
+  'PID:': '1091'
+  Usario: pedro
+  porta de acesso: '51234'
+26:
+  Criticidade: Alta
+  IP de acesso: null
+  'PID:': '1094]: Connection closed by authenticating user pedro 200.145.32.7 port
+    51234 [preauth'
+  Usario: null
+  porta de acesso: null
+27:
+  Criticidade: Alta
+  IP de acesso: 62.210.99.14
+  'PID:': '1097'
+  Usario: invalid user guest
+  porta de acesso: '42311'
+28:
+  Criticidade: Alta
+  IP de acesso: 62.210.99.14
+  'PID:': '1100'
+  Usario: invalid user guest
+  porta de acesso: '42312'
+29:
+  Criticidade: Alta
+  IP de acesso: 62.210.99.14
+  'PID:': '1103'
+  Usario: invalid user guest
+  porta de acesso: '42313'
+30:
+  Criticidade: Alta
+  IP de acesso: 62.210.99.14
+  'PID:': '1106'
+  Usario: invalid user guest
+  porta de acesso: '42314'
+31:
+  Criticidade: Alta
+  IP de acesso: 62.210.99.14
+  'PID:': '1109'
+  Usario: invalid user guest
+  porta de acesso: '42315'
+32:
+  Criticidade: Alta
+  IP de acesso: 172.16.1.15
+  'PID:': '1112'
+  Usario: ana
+  porta de acesso: '60021'
+33:
+  Criticidade: Alta
+  IP de acesso: 189.77.12.5
+  'PID:': '1115'
+  Usario: lucas
+  porta de acesso: '52211'
+34:
+  Criticidade: Alta
+  IP de acesso: 189.77.12.5
+  'PID:': '1118'
+  Usario: lucas
+  porta de acesso: '52212'
+35:
+  Criticidade: Alta
+  IP de acesso: null
+  'PID:': '1121'
+  Usario: null
+  porta de acesso: null
+36:
+  Criticidade: Alta
+  IP de acesso: 37.49.225.33
+  'PID:': '1124'
+  Usario: root
+  porta de acesso: '39001'
+37:
+  Criticidade: Alta
+  IP de acesso: 37.49.225.33
+  'PID:': '1127'
+  Usario: root
+  porta de acesso: '39002'
+38:
+  Criticidade: Alta
+  IP de acesso: 37.49.225.33
+  'PID:': '1130'
+  Usario: root
+  porta de acesso: '39003'
+39:
+  Criticidade: Alta
+  IP de acesso: 37.49.225.33
+  'PID:': '1133'
+  Usario: root
+  porta de acesso: '39004'
