@@ -1,10 +1,10 @@
-# Nautilus
+# Bloodhound - Caça de ameaças
 
-Este repositório contém o projeto **Nautilus**, desenvolvido como um **projeto acadêmico**  para um sistema de **SIEM (Security Information and Event Management)** simplificado, focado na análise de logs de autenticação SSH.
+Este repositório contém o projeto **Bloodhound**, desenvolvido como um **projeto acadêmico**  para um sistema de **SIEM (Security Information and Event Management)** simplificado, focado na análise de logs de autenticação SSH.
 
 ## 🚀 Conceito do Projeto
 
-O objetivo principal do Nautilus é demonstrar a capacidade de processamento e análise de logs estruturados para identificação de possíveis ameaças em um ambiente de rede. Atualmente, o sistema realiza as seguintes operações:
+O objetivo principal do Bloodhound é demonstrar a capacidade de processamento e análise de logs estruturados para identificação de possíveis ameaças em um ambiente de rede. Atualmente, o sistema realiza as seguintes operações:
 
 1.  **Ingestão de Dados**: Leitura de arquivos de log (`logs.txt`) no padrão de autenticação do serviço SSH.
 2.  **Parsing de Logs**: Utilização de expressões regulares (Regex) para extrair informações críticas, como:
@@ -40,5 +40,6 @@ Esta abordagem transforma o SIEM de uma ferramenta passiva de monitoramento em u
 
 ---
 *Nota: Este projeto está sendo desenvolvido na branch `dev` para testes de novas funcionalidades de parsing e integração.*
+
 
 
