@@ -1,5 +1,5 @@
 # Nerdy - Analise de Logs
-
+![https://github.com/Theo-Panella/Nerdy/blob/main/a80db024-968b-4a7f-b139-61eba5eae91b.jpeg]
 Este repositório contém o projeto **Nerdy**, desenvolvido como um **projeto acadêmico**  para um sistema de **SIEM (Security Information and Event Management)** simplificado, focado na análise de logs de autenticação SSH.
 O nome pode ate não ser obvio... **mas quem alem de um nerd para ficar lendo logs???**
 
@@ -41,6 +41,7 @@ Esta abordagem transforma o SIEM de uma ferramenta passiva de monitoramento em u
 
 ---
 *Nota: Este projeto está sendo desenvolvido na branch `dev` para testes de novas funcionalidades de parsing e integração.*
+
 
 
 
