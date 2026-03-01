@@ -1,10 +1,10 @@
-# UNISIEM-te
+# Nerdy
 
-Este repositório contém o projeto **UNISIEM-te**, desenvolvido como um **projeto acadêmico**  para um sistema de **SIEM (Security Information and Event Management)** simplificado, focado na análise de logs de autenticação SSH.
+Este repositório contém o projeto **Nerdy**, desenvolvido como um **projeto acadêmico**  para um sistema de **SIEM (Security Information and Event Management)** simplificado, focado na análise de logs de autenticação SSH.
 
 ## 🚀 Conceito do Projeto
 
-O objetivo principal do UNISIEM-te é demonstrar a capacidade de processamento e análise de logs estruturados para identificação de possíveis ameaças em um ambiente de rede. Atualmente, o sistema realiza as seguintes operações:
+O objetivo principal do Nerdy é demonstrar a capacidade de processamento e análise de logs estruturados para identificação de possíveis ameaças em um ambiente de rede. Atualmente, o sistema realiza as seguintes operações:
 
 1.  **Ingestão de Dados**: Leitura de arquivos de log (`logs.txt`) no padrão de autenticação do serviço SSH.
 2.  **Parsing de Logs**: Utilização de expressões regulares (Regex) para extrair informações críticas, como:
