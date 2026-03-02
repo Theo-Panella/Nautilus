@@ -13,7 +13,7 @@ import yaml
 #IPs já conhecidos: "203.190.22.1", "91.200.14.88", "189.77.12.5"
 IPs = ["203.190.22.1", "91.200.14.88", "189.77.12.5"]
 Usuarios = ["root", "admin", "theo", "serginho"]
-
+servidores = ["server01"]
 
 # Variavel de abertura do arquivo de logs
 log_file = open('logs.txt', 'r')
@@ -27,14 +27,32 @@ data = {}
 #Feb 24 10:00:33 server01 sshd[1035]: Failed password for maria from 191.32.88.10 port 49821 ssh2
 #Feb 24 10:00:40 server01 sshd[1038]: Accepted password for maria from 191.32.88.10 port 49822 ssh2
 # --------------------------------------------------------------------------------------------------------------------
-# Bloco de analise de usuarios
-# --------------------------------------------------------------------------------------------------------------------
+#def analisa_usuario_falha(usuario):
+#    result = re.search("Failed password for (.*) from", usuario)
+#    if result:
+#        return result.group(1)
+#    else:
+#        return "Usuario invalido"
+#        
+#
+#def analisa_usuario_invalido(usuario):
+#    result = re.search("Invalid user (.*) from", usuario)
+#    if result:
+#        return result.group(1)
+#    else:
+#        return "Usuario invalido"
+
 def analisa_user(logs):
     #for result in logs:
         if re.search("Failed password for.*", logs):
             log_wrong_passwd = re.search("Failed password for (.*) from", logs)
             if log_wrong_passwd:
                 return log_wrong_passwd.group(1)
+            
+        elif re.search("Connection closed by authenticating user.*", logs):
+            log_connec_close = re.search(f"Connection closed by authenticating user (.*) .* port .*", logs)
+            if log_connec_close:
+                return log_connec_close.group(1)
 
         elif re.search("Invalid user.*", logs):
             log_invalid_user = re.search("Invalid user (.*) from", logs)
@@ -47,15 +65,28 @@ def analisa_user(logs):
             return re.search(f"Accepted password for (.*) from", logs).group(1)
 # --------------------------------------------------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------------------------------------------------
+# Bloco de analise do servidor
+# --------------------------------------------------------------------------------------------------------------------
+def analisa_servidor(logs):
+    servidor = logs.split(" ")
+    return servidor[3]
+             
 
 # --------------------------------------------------------------------------------------------------------------------
 # Bloco de analise de IPs, portas e PID
 # --------------------------------------------------------------------------------------------------------------------
 def analisa_ip(logs):
+    #for result in logs:
         if re.search("Failed password for.*", logs):
             log_wrong_passwd_ip = re.search("Failed password for.* from (.*) port", logs)
             if log_wrong_passwd_ip:
                 return log_wrong_passwd_ip.group(1)
+        
+        elif re.search("Connection closed by authenticating user.*", logs):
+            log_connec_close = re.search(f"Connection closed by authenticating user.* (.*) port .*", logs)
+            if log_connec_close:
+                return log_connec_close.group(1)
 
         elif re.search("Invalid user.*", logs):
             log_invalid_user_ip = re.search("Invalid user.* from (.*) port", logs)
@@ -68,13 +99,19 @@ def analisa_ip(logs):
                 return log_successful_login_ip.group(1)
             
 def analisa_porta(logs):
+    #for result in logs:
         if re.search("Failed password for.*", logs):
             log_wrong_passwd_port = re.search("Failed password for.* port (.*) ssh2", logs)
             if log_wrong_passwd_port:
                 return log_wrong_passwd_port.group(1)
+            
+        elif re.search("Connection closed by authenticating user.*", logs):
+            log_connec_close = re.search(f"Connection closed by authenticating user.* port (.*)", logs)
+            if log_connec_close:
+                return log_connec_close.group(1)
 
         elif re.search("Invalid user.*", logs):
-            log_invalid_user_port = re.search("Invalid user.* port (.*) ssh2", logs)
+            log_invalid_user_port = re.search("Invalid user.* port (.*)", logs)
             if log_invalid_user_port:
                 return log_invalid_user_port.group(1) 
 
@@ -85,50 +122,58 @@ def analisa_porta(logs):
 
 def analisa_pid(logs):
     #for result in logs:
-        pid = re.search("sshd\[(.*)\]", logs)
+        pid = re.search("sshd\[(.*)\]:", logs)
         if pid:
             return pid.group(1)
 # --------------------------------------------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------------------------------------------
-# Bloco de analise de Criticidade
+# Bloco de Criticidade
 # --------------------------------------------------------------------------------------------------------------------
-def analisa_criticidade(logs):
-    criticidade = 0
-    if (analisa_user(logs) not in Usuarios or analisa_ip(logs) not in IPs):
-        criticidade += 4
-        if re.search("Failed password for.*", logs):
-            criticidade += 3    
-        elif re.search("Invalid user.*", logs):
-            criticidade += 2
-        elif re.search("Accepted password for.*", logs):
-            criticidade += 1
-    else:
-        criticidade += 1
-    
-    return criticidade
+##################TERMINAR######################
+def criticidade(Usuario, IP_origem, porta):
+    #score = ponto + qtd
+    ponto = 0
+    # qtd += 1
+    for usuarios_array in Usuarios:
+        if usuarios_array != Usuario:
+            ponto += 1
+##################TERMINAR######################
+
+
 
 # --------------------------------------------------------------------------------------------------------------------
 # Bloco de analise geral
 # --------------------------------------------------------------------------------------------------------------------
+
 def analisa_geral(logs):
-        return {
+        result = {
             "Usario": analisa_user(logs),
-            "IP de acesso": analisa_ip(logs),
-            "porta de acesso": analisa_porta(logs),
+            "Endereco Servidor": analisa_servidor(logs),
+            "IP de Origem": analisa_ip(logs),
+            "porta de Conexao": analisa_porta(logs),
             "PID:" : analisa_pid(logs),
-            "Criticidade": (analisa_criticidade(logs))
         }
 
+        return result
+        
 
 
 for c in range(len(logs)):
+    analise_por_campo = analisa_geral(logs[c])
     newdata = {
         c: {
-        **analisa_geral(logs[c]) # Desconpacta o dicionário e retorna equivalente a cada linha
+        "Usario": analise_por_campo["Usario"],
+        "Endereco Servidor": analise_por_campo["Endereco Servidor"],
+        "IP de Origem": analise_por_campo["IP de Origem"],
+        "porta de Conexao": analise_por_campo["porta de Conexao"],
+        "PID:" : analise_por_campo["PID:"],
+        "Criticidade": criticidade(analise_por_campo["Usario"], analise_por_campo["IP de Origem"], analise_por_campo["porta de Conexao"])
         }}
 
     data.update(newdata)
 
     with open("file.yaml","w") as file:
         yaml.dump(data, file)
+
+    print(newdata)
