@@ -59,9 +59,10 @@ def criticidade(usuario, ip_origem, porta, contexto):
     if usuario not in Usuarios:
         score += 2
         agravantes += 1
-
-    if usuario in ["root", "admin"]:
+    if usuario in ["root", "admin"] and ip_origem not in IPs:
         score += 3
+    elif usuario in ["root","admin"]:
+        score+=2
 
     # ----------------------------
     # Desvio de IP
