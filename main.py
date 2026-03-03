@@ -26,6 +26,7 @@ log_file = open('logs.txt', 'r')
 logs = log_file.readlines() 
 data = {}
 contador_tentativas = {}
+eventos_agregados = {}
 
 
 # Bloco de Analise de usuarios
@@ -111,9 +112,6 @@ def analisa_geral(logs):
 
         return result
         
-
-data = {}
-eventos_agregados = {}
 
 for log in logs:
     analise_por_campo = analisa_geral(log)
