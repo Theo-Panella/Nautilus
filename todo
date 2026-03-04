@@ -1,6 +1,9 @@
 
 ### To do
-- [ ] Implementação de Elastic Search #feat @john 2020-03-20  
+
+- [ ] Subir servidor ssh e pegar logs reais para testes - 04/03/2026 theo
+- [ ] Implementação de Elastic Search - 04/03/2026 theo
+- [ ] Pesquisar como fazer para leitura em tempo real de logs - 04/03/2026 theo 
 
 ### In Progress
 
