@@ -41,33 +41,56 @@ eventos_agregados = {}
 # Bloco de Criticidade
 # --------------------------------------------------------------------------------------------------------------------
 def criticidade(usuario, ip_origem, porta, contexto, tentativas=1):
+    
     score = 0
-
-    # ----------------------------
-    # Classificação de IP
-    # ----------------------------
-    if ip_origem in IPs:
-        score += 1   # IP conhecido
-    else:
-        score += 4   # IP desconhecido
-
-    # ----------------------------
-    # Classificação de Usuário
-    # ----------------------------
-    if usuario in Usuarios:
-        score += 1   # Usuário conhecido
-    else:
-        score += 4   # Usuário inexistente/desconhecido
-
+    
     # ----------------------------
     # Contexto de autenticação
     # ----------------------------
     pesos_contexto = {
-        "senha_errada": 1,
-        "senha_correta": 3,
-        "acesso_negado": 3,
-        "conexao_fechada": 1
+        "Acesso aceito": 3,
+        "Acesso Negado": 3,
+        "Conexão fechada": 1
     }
+
+
+    # -----------------------------------
+    # Classificação de IP por contexto
+    # -----------------------------------
+
+    if ip_origem in IPs:
+        if usuario in Usuarios:
+            if contexto == "Acesso Negado":
+                score = 2 + pesos_contexto[contexto]
+
+            elif contexto == "Acesso aceito":
+                score = 1 + pesos_contexto[contexto]
+
+            else:
+                score = 1 + pesos_contexto[contexto]
+        else:
+            if contexto == "Acesso Negado":
+                score = 2 + pesos_contexto[contexto]
+
+            else:
+                score = 2 + pesos_contexto[contexto]
+
+    else:
+        if usuario in Usuarios:
+            if contexto == "Acesso Negado":
+                score = 2 + pesos_contexto[contexto]
+
+            elif contexto == "Acesso aceito":
+                score = 6 + pesos_contexto[contexto]
+
+            else:
+                score = 2 + pesos_contexto[contexto]
+        else:
+            if contexto == "Acesso Negado":
+                score = 1 + pesos_contexto[contexto]
+
+            else:
+                score = 1 + pesos_contexto[contexto]
 
     score += pesos_contexto.get(contexto, 0)
 
