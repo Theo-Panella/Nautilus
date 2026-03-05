@@ -1,40 +1,95 @@
-Feb 24 10:00:01 server01 sshd[1021]: Failed password for root from 185.243.115.21 port 53421 ssh2
-Feb 24 10:00:05 server01 sshd[1023]: Failed password for root from 185.243.115.21 port 53421 ssh2
-Feb 24 10:00:09 server01 sshd[1025]: Failed password for root from 185.243.115.21 port 53421 ssh2
-Feb 24 10:00:14 server01 sshd[1027]: Failed password for admin from 185.243.115.21 port 53421 ssh2
-Feb 24 10:00:20 server01 sshd[1030]: Failed password for invalid user oracle from 45.83.12.77 port 53421 ssh2
-Feb 24 10:00:26 server01 sshd[1032]: Invalid user test from 45.83.12.77 port 53421
-Feb 24 10:00:33 server01 sshd[1035]: Failed password for maria from 191.32.88.10 port 53421 ssh2
-Feb 24 10:00:40 server01 sshd[1038]: Accepted password for maria from 191.32.88.10 port 53421 ssh2
-Feb 24 10:00:48 server01 sshd[1041]: Connection closed by authenticating user maria 191.32.88.10 port 53421 [preauth]
-Feb 24 10:00:55 server01 sshd[1044]: Failed password for root from 203.190.22.1 port 53421 ssh2
-Feb 24 10:01:02 server01 sshd[1047]: Failed password for root from 203.190.22.1 port 53421 ssh2
-Feb 24 10:01:08 server01 sshd[1050]: Failed password for root from 203.190.22.1 port 53421 ssh2
-Feb 24 10:01:15 server01 sshd[1053]: Failed password for root from 203.190.22.1 port 53421 ssh2
-Feb 24 10:01:21 server01 sshd[1056]: Failed password for root from 203.190.22.1 port 53421 ssh2
-Feb 24 10:01:30 server01 sshd[1059]: Accepted password for theo from 177.54.21.99 port 53421 ssh2
-Feb 24 10:01:39 server01 sshd[1062]: Failed password for invalid user postgres from 103.77.192.44 port 53421 ssh2
-Feb 24 10:01:44 server01 sshd[1064]: Invalid user backup from 103.77.192.44 port 53421
-Feb 24 10:01:50 server01 sshd[1067]: Failed password for joao from 10.0.0.12 port 53421 ssh2
-Feb 24 10:01:57 server01 sshd[1070]: Accepted password for joao from 10.0.0.12 port 53421 ssh2
-Feb 24 10:02:04 server01 sshd[1073]: Received disconnect from 10.0.0.12 port 53421:11: disconnected by user joao
-Feb 24 10:02:10 server01 sshd[1076]: Failed password for root from 91.200.14.88 port 53421 ssh2
-Feb 24 10:02:16 server01 sshd[1079]: Failed password for admin from 91.200.14.88 port 53421 ssh2
-Feb 24 10:02:23 server01 sshd[1082]: Failed password for root from 91.200.14.88 port 53421 ssh2
-Feb 24 10:02:30 server01 sshd[1085]: Failed password for root from 91.200.14.88 port 53421 ssh2
-Feb 24 10:02:37 server01 sshd[1088]: Failed password for root from 91.200.14.88 port 53421 ssh2
-Feb 24 10:02:45 server01 sshd[1091]: Accepted password for pedro from 200.145.32.7 port 53421 ssh2
-Feb 24 10:02:52 server01 sshd[1094]: Connection closed by authenticating user pedro 200.145.32.7 port 53421 [preauth]
-Feb 24 10:03:00 server01 sshd[1097]: Failed password for invalid user guest from 62.210.99.14 port 53421 ssh2
-Feb 24 10:03:07 server01 sshd[1100]: Failed password for invalid user guest from 62.210.99.14 port 53421 ssh2
-Feb 24 10:03:14 server01 sshd[1103]: Failed password for invalid user guest from 62.210.99.14 port 53421 ssh2
-Feb 24 10:03:21 server01 sshd[1106]: Failed password for invalid user guest from 62.210.99.14 port 53421 ssh2
-Feb 24 10:03:29 server01 sshd[1109]: Failed password for invalid user guest from 62.210.99.14 port 53421 ssh2
-Feb 24 10:03:37 server01 sshd[1112]: Accepted password for ana from 172.16.1.15 port 53421 ssh2
-Feb 24 10:03:44 server01 sshd[1115]: Failed password for lucas from 189.77.12.5 port 53421 ssh2
-Feb 24 10:03:52 server01 sshd[1118]: Accepted password for lucas from 189.77.12.5 port 53421 ssh2
-Feb 24 10:04:00 server01 sshd[1121]: Received disconnect from 189.77.12.5 port 53421:11: disconnected by user lucas
-Feb 24 10:04:09 server01 sshd[1124]: Failed password for root from 37.49.225.33 port 53421 ssh2
-Feb 24 10:04:17 server01 sshd[1127]: Failed password for root from 37.49.225.33 port 53421 ssh2
-Feb 24 10:04:24 server01 sshd[1130]: Failed password for root from 37.49.225.33 port 53421 ssh2
-Feb 24 10:04:32 server01 sshd[1133]: Failed password for root from 37.49.225.33 port 53421 ssh2
+Feb 24 10:00:01 server01 sshd[1001]: Failed password for root from 203.190.22.1 port 53421 ssh2
+Feb 24 10:00:02 server01 sshd[1002]: Failed password for admin from 203.190.22.1 port 53422 ssh2
+Feb 24 10:00:03 server01 sshd[1003]: Failed password for theo from 203.190.22.1 port 53423 ssh2
+Feb 24 10:00:04 server01 sshd[1004]: Failed password for serginho from 203.190.22.1 port 53424 ssh2
+Feb 24 10:00:05 server01 sshd[1005]: Connection closed by authenticating user root 203.190.22.1 port 53425 [preauth]
+
+Feb 24 10:01:01 server01 sshd[1006]: Failed password for root from 91.200.14.88 port 44211 ssh2
+Feb 24 10:01:02 server01 sshd[1007]: Failed password for admin from 91.200.14.88 port 44212 ssh2
+Feb 24 10:01:03 server01 sshd[1008]: Failed password for theo from 91.200.14.88 port 44213 ssh2
+Feb 24 10:01:04 server01 sshd[1009]: Failed password for serginho from 91.200.14.88 port 44214 ssh2
+Feb 24 10:01:05 server01 sshd[1010]: Connection closed by authenticating user admin 91.200.14.88 port 44215 [preauth]
+
+Feb 24 10:02:01 server01 sshd[1011]: Failed password for root from 189.77.12.5 port 39011 ssh2
+Feb 24 10:02:02 server01 sshd[1012]: Failed password for admin from 189.77.12.5 port 39012 ssh2
+Feb 24 10:02:03 server01 sshd[1013]: Failed password for theo from 189.77.12.5 port 39013 ssh2
+Feb 24 10:02:04 server01 sshd[1014]: Failed password for serginho from 189.77.12.5 port 39014 ssh2
+Feb 24 10:02:05 server01 sshd[1015]: Connection closed by authenticating user root 189.77.12.5 port 39015 [preauth]
+
+Feb 24 10:03:01 server01 sshd[1016]: Invalid user guest from 185.243.115.21 port 50121
+Feb 24 10:03:02 server01 sshd[1017]: Failed password for invalid user guest from 185.243.115.21 port 50121 ssh2
+Feb 24 10:03:03 server01 sshd[1018]: Failed password for invalid user test from 185.243.115.21 port 50122 ssh2
+Feb 24 10:03:04 server01 sshd[1019]: Invalid user oracle from 185.243.115.21 port 50123
+Feb 24 10:03:05 server01 sshd[1020]: Connection closed by invalid user oracle 185.243.115.21 port 50123 [preauth]
+
+Feb 24 10:04:01 server01 sshd[1021]: Failed password for root from 203.190.22.1 port 53430 ssh2
+Feb 24 10:04:02 server01 sshd[1022]: Failed password for admin from 203.190.22.1 port 53431 ssh2
+Feb 24 10:04:03 server01 sshd[1023]: Failed password for theo from 203.190.22.1 port 53432 ssh2
+Feb 24 10:04:04 server01 sshd[1024]: Failed password for serginho from 203.190.22.1 port 53433 ssh2
+Feb 24 10:04:05 server01 sshd[1025]: Connection closed by authenticating user root 203.190.22.1 port 53434 [preauth]
+
+Feb 24 10:05:01 server01 sshd[1026]: Failed password for root from 91.200.14.88 port 44220 ssh2
+Feb 24 10:05:02 server01 sshd[1027]: Failed password for admin from 91.200.14.88 port 44221 ssh2
+Feb 24 10:05:03 server01 sshd[1028]: Failed password for theo from 91.200.14.88 port 44222 ssh2
+Feb 24 10:05:04 server01 sshd[1029]: Failed password for serginho from 91.200.14.88 port 44223 ssh2
+Feb 24 10:05:05 server01 sshd[1030]: Connection closed by authenticating user theo 91.200.14.88 port 44224 [preauth]
+
+Feb 24 10:06:01 server01 sshd[1031]: Failed password for root from 189.77.12.5 port 39021 ssh2
+Feb 24 10:06:02 server01 sshd[1032]: Failed password for admin from 189.77.12.5 port 39022 ssh2
+Feb 24 10:06:03 server01 sshd[1033]: Failed password for theo from 189.77.12.5 port 39023 ssh2
+Feb 24 10:06:04 server01 sshd[1034]: Failed password for serginho from 189.77.12.5 port 39024 ssh2
+Feb 24 10:06:05 server01 sshd[1035]: Accepted password for theo from 189.77.12.5 port 39025 ssh2
+
+Feb 24 10:07:01 server01 sshd[1036]: Invalid user postgres from 45.9.148.77 port 60011
+Feb 24 10:07:02 server01 sshd[1037]: Failed password for invalid user postgres from 45.9.148.77 port 60011 ssh2
+Feb 24 10:07:03 server01 sshd[1038]: Invalid user ftp from 45.9.148.77 port 60012
+Feb 24 10:07:04 server01 sshd[1039]: Failed password for invalid user ftp from 45.9.148.77 port 60012 ssh2
+Feb 24 10:07:05 server01 sshd[1040]: Connection closed by invalid user ftp 45.9.148.77 port 60012 [preauth]
+
+Feb 24 10:08:01 server01 sshd[1041]: Failed password for root from 203.190.22.1 port 53440 ssh2
+Feb 24 10:08:02 server01 sshd[1042]: Failed password for admin from 203.190.22.1 port 53441 ssh2
+Feb 24 10:08:03 server01 sshd[1043]: Failed password for theo from 203.190.22.1 port 53442 ssh2
+Feb 24 10:08:04 server01 sshd[1044]: Failed password for serginho from 203.190.22.1 port 53443 ssh2
+Feb 24 10:08:05 server01 sshd[1045]: Connection closed by authenticating user root 203.190.22.1 port 53444 [preauth]
+
+Feb 24 10:09:01 server01 sshd[1046]: Failed password for root from 91.200.14.88 port 44230 ssh2
+Feb 24 10:09:02 server01 sshd[1047]: Failed password for admin from 91.200.14.88 port 44231 ssh2
+Feb 24 10:09:03 server01 sshd[1048]: Failed password for theo from 91.200.14.88 port 44232 ssh2
+Feb 24 10:09:04 server01 sshd[1049]: Failed password for serginho from 91.200.14.88 port 44233 ssh2
+Feb 24 10:09:05 server01 sshd[1050]: Accepted password for admin from 91.200.14.88 port 44234 ssh2
+
+Feb 24 10:10:01 server01 sshd[1051]: Failed password for root from 189.77.12.5 port 39031 ssh2
+Feb 24 10:10:02 server01 sshd[1052]: Failed password for admin from 189.77.12.5 port 39032 ssh2
+Feb 24 10:10:03 server01 sshd[1053]: Failed password for theo from 189.77.12.5 port 39033 ssh2
+Feb 24 10:10:04 server01 sshd[1054]: Failed password for serginho from 189.77.12.5 port 39034 ssh2
+Feb 24 10:10:05 server01 sshd[1055]: Connection closed by authenticating user admin 189.77.12.5 port 39035 [preauth]
+
+Feb 24 10:11:01 server01 sshd[1056]: Invalid user test from 103.44.12.9 port 62011
+Feb 24 10:11:02 server01 sshd[1057]: Failed password for invalid user test from 103.44.12.9 port 62011 ssh2
+Feb 24 10:11:03 server01 sshd[1058]: Invalid user backup from 103.44.12.9 port 62012
+Feb 24 10:11:04 server01 sshd[1059]: Failed password for invalid user backup from 103.44.12.9 port 62012 ssh2
+Feb 24 10:11:05 server01 sshd[1060]: Connection closed by invalid user backup 103.44.12.9 port 62012 [preauth]
+
+Feb 24 10:12:01 server01 sshd[1061]: Failed password for root from 203.190.22.1 port 53450 ssh2
+Feb 24 10:12:02 server01 sshd[1062]: Failed password for admin from 203.190.22.1 port 53451 ssh2
+Feb 24 10:12:03 server01 sshd[1063]: Failed password for theo from 203.190.22.1 port 53452 ssh2
+Feb 24 10:12:04 server01 sshd[1064]: Failed password for serginho from 203.190.22.1 port 53453 ssh2
+Feb 24 10:12:05 server01 sshd[1065]: Connection closed by authenticating user theo 203.190.22.1 port 53454 [preauth]
+
+Feb 24 10:13:01 server01 sshd[1066]: Failed password for root from 91.200.14.88 port 44240 ssh2
+Feb 24 10:13:02 server01 sshd[1067]: Failed password for admin from 91.200.14.88 port 44241 ssh2
+Feb 24 10:13:03 server01 sshd[1068]: Failed password for theo from 91.200.14.88 port 44242 ssh2
+Feb 24 10:13:04 server01 sshd[1069]: Failed password for serginho from 91.200.14.88 port 44243 ssh2
+Feb 24 10:13:05 server01 sshd[1070]: Connection closed by authenticating user root 91.200.14.88 port 44244 [preauth]
+
+Feb 24 10:14:01 server01 sshd[1071]: Failed password for root from 189.77.12.5 port 39041 ssh2
+Feb 24 10:14:02 server01 sshd[1072]: Failed password for admin from 189.77.12.5 port 39042 ssh2
+Feb 24 10:14:03 server01 sshd[1073]: Failed password for theo from 189.77.12.5 port 39043 ssh2
+Feb 24 10:14:04 server01 sshd[1074]: Failed password for serginho from 189.77.12.5 port 39044 ssh2
+Feb 24 10:14:05 server01 sshd[1075]: Accepted password for serginho from 189.77.12.5 port 39045 ssh2
+
+Feb 24 10:15:01 server01 sshd[1076]: Invalid user git from 172.105.33.11 port 63011
+Feb 24 10:15:02 server01 sshd[1077]: Failed password for invalid user git from 172.105.33.11 port 63011 ssh2
+Feb 24 10:15:03 server01 sshd[1078]: Invalid user ubuntu from 172.105.33.11 port 63012
+Feb 24 10:15:04 server01 sshd[1079]: Failed password for invalid user ubuntu from 172.105.33.11 port 63012 ssh2
+Feb 24 10:15:05 server01 sshd[1080]: Connection closed by invalid user ubuntu 172.105.33.11 port 63012 [preauth]
