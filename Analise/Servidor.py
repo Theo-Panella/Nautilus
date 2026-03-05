@@ -2,5 +2,7 @@
 # Bloco de analise do servidor
 # --------------------------------------------------------------------------------------------------------------------
 def analisa_servidor(logs):
-    servidor = logs.split(" ")
-    return servidor[3]
+    if logs.strip():
+        servidor = logs.split(" ")
+        return servidor[3]
+    return None
