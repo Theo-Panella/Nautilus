@@ -19,6 +19,6 @@ def analisar_contexto(linha_log):
     
     elif regex_closed.search(linha_log):
         return "Conexão fechada"
-    
+
     else:
         return "Evento desconhecido"
