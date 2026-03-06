@@ -14,6 +14,7 @@
 
 ## P2 
 - [ ] Pesquisar a criação de um code py como serviço (agent) - 06/03/2026 theo
+- [ ] Rever Conceito de Score (Score por Risco de Evento, Score por Contexto, Peso por Contexto de Evento Sla) 06/03/2026 theo
 
 ## P3 
 - [ ] Pesquisar como fazer para leitura em tempo real de logs - 04/03/2026 theo 
