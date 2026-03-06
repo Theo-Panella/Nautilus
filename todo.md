@@ -10,9 +10,9 @@
 
 ## P1 
 - [ ] Subir servidor ssh e pegar logs reais para testes - 04/03/2026 theo
+- [ ] Implementação de Elastic Search, para indexação dos dados - 04/03/2026 theo
 
 ## P2 
-- [ ] Implementação de Elastic Search ou OpenSearch - 04/03/2026 theo
 - [ ] Pesquisar a criação de um code py como serviço (agent) - 06/03/2026 theo
 
 ## P3 
