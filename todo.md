@@ -11,11 +11,11 @@
 - [x] Pesquisar como fazer para leitura em tempo real de logs - 04/03/2026 theo 
 
 ## P1 
-- [ ] Implementação de Elastic Search, para indexação dos dados - 04/03/2026 theo
+- [ ] Criar o code em Rust para pré filtragem dos dados - 06/03/2026 theo
 - [ ] Pegar logs reais para testes do servidor novo - 13/03/2026 theo
 
 ## P2 
-- [ ] Pesquisar a criação de um code em Rust como serviço (agent) - 06/03/2026 theo
+- [ ] Implementação de Elastic Search, para indexação dos dados - 04/03/2026 theo
 - [ ] Rever Conceito de Score (Score por Risco de Evento, Score por Contexto, Peso por Contexto de Evento Sla) 06/03/2026 theo
 
 ## P3 
