@@ -1,3 +1,19 @@
+# Arquivo padronizado
 file.yaml
-Analise/__pycache__/
+
+# enviroment
 venv
+
+# python cache
+database/__pycache__/
+Analise/__pycache__/
+*.pyc
+
+# banco de dados
+nerdy-web/*.db
+
+# variáveis de ambiente
+.env
+
+# sistema
+.DS_Store
