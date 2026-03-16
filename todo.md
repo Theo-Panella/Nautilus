@@ -11,7 +11,6 @@
 - [x] Pesquisar como fazer para leitura em tempo real de logs - 04/03/2026 theo 
 
 ## P1 
-- [ ] Criar o code em Rust para pré filtragem dos dados - 06/03/2026 theo
 - [ ] Pegar logs reais para testes do servidor novo - 13/03/2026 theo
 
 ## P2 
