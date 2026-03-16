@@ -1,8 +1,8 @@
 # Nerdy — Security Intelligence Platform
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
-![Status](https://img.shields.io/badge/status-homologação-yellow)
-![Branch](https://img.shields.io/badge/branch-homologacao-orange)
+![Status](https://img.shields.io/badge/status-homologação-red)
+![Branch](https://img.shields.io/badge/branch-dev-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 > Sistema de análise de logs de segurança com parsing automatizado, classificação de criticidade por score e resposta baseada em risco — evoluindo de monitoramento SSH para análise de aplicações web e servidor Nginx.
