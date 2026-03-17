@@ -176,9 +176,8 @@ Nerdy/
 
 | Branch | Escopo | Status |
 |---|---|---|
-| `main` | Análise de logs SSH | Estável |
-| `homologacao` | Expansão para Nginx e aplicação web | Em andamento |
-| `dev` | Integração Elasticsearch + scoring avançado | Experimental |
+| `main` | Análise de logs SSH simplificada | Estável |
+| `dev` | Integração de Elastic Search + Score (evento + contexto) + Servidor nginx + Dasboard de gerenciamento | Experimental |
 
 **Próximas evoluções planejadas:**
 - Ingestão em tempo real via streaming (substituindo leitura em batch)
