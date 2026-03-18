@@ -2,7 +2,7 @@ name: "Deploy para VPS"
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build_deploy:
