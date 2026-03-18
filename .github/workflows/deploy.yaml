@@ -41,7 +41,7 @@ jobs:
             python3 nerdy_web/Aplicacao_WEB/database/init_db.py
             
             # Mata o processo anterior se estiver rodando
-            pkill -f "main.py" || true
+            # pkill -f "main.py" || true
             
             # Roda em background e mantém mesmo após SSH fechar
             nohup python3 nerdy_web/Aplicacao_WEB/main.py > /var/log/nerdy.log 2>&1 &
